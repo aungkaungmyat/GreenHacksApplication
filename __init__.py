@@ -22,6 +22,8 @@ def login_page():
         password = request.form['password']
         try:
             user = auth.sign_in_with_email_and_password(email, password)
+            print(auth.get_account_info(user['idToken']))
+            print(user)
             session['username'] = user['localId']
             return redirect(url_for('landing_page'))
         except:
@@ -46,6 +48,18 @@ def register_page():
                 errorMessage = 'An account with that email already exists'
             print(e)
     return render_template('register.html', errorMessage=errorMessage)
+
+@app.route('/reset-password', methods=['GET', 'POST'])
+def  reset_password():
+    errorMessage = ''
+    if request.method == 'POST':
+        email = request.form['email']
+        try:
+            auth.send_password_reset_email(email)
+            return render_template('reset-password-message.html')
+        except:
+            errorMessage = 'Invalid email'
+    return render_template('reset-password.html', errorMessage=errorMessage)
 
 @app.route('/logout')
 def logout():
