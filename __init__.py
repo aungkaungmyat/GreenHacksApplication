@@ -9,7 +9,10 @@ auth = firebase.auth()
 
 @app.route('/')
 def landing_page():
-    return render_template('index.html', user=session['username'])
+    if session:
+        return render_template('index.html', user=session['username'])
+    else:
+        return render_template('index.html', user=None)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
@@ -43,6 +46,11 @@ def register_page():
                 errorMessage = 'An account with that email already exists'
             print(e)
     return render_template('register.html', errorMessage=errorMessage)
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('landing_page'))
 
 if __name__ == '__main__':
     app.secret_key = key
