@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    margin: 0;
+    height: 0;
+    background: #fcfcfc;
+    font-family: 'Roboto', sans-serif;
+}
+
+#mount-background {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%234caf50' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%231b5e20' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%235cb34f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%233f641e' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%236ab74e' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2355691d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%2376bb4c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23666e1b' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%2381bf4b' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23757219' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%238bc34a' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23827717' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"), linear-gradient(to bottom, #05abe0 0%,#53cbf1 60%,#87e0fd 100%);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#white-background {
+    position: relative;
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+}
+
+#clouds {
+    position: absolute;
+    bottom: -50px;
+    background-image: url("/static/assets/HackathonClouds.svg");
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+}
+
+#temp-title {
+    font-size: 100px;
+    top: 100px;
+}
+
+.footer {
+    background: #f3f3f3;
+    position: relative;
+    box-shadow: 0 500px 0 500px #f3f3f3;
+}
+
+.row {
+    margin: 0;
+}
+
+.navbar-extra {
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    background-color: #e3f2fd !important;
+    opacity: 0.95;
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    max-width: none;
+}
+
+.custom-card {
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+    z-index: 1;
+}
+
+.auth-card {
+    max-width: 500px;
+    position: relative;
+    min-width: 300px;
+    height: 400px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 50px;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #009688 !important;
+    border-color: #009688 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar {
+    z-index: 1;
+}
