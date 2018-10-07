@@ -38,6 +38,12 @@ def sponsors_page():
     else:
         return render_template('sponsors.html', user=None)
 
+@app.route('/team')
+def team_page():
+    if session:
+        return render_template('team.html', user=session['username'])
+    else:
+        return render_template('team.html', user=None)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
