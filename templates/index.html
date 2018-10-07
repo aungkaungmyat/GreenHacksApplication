@@ -8,7 +8,42 @@
         <img src="{{ url_for('static',filename='assets/HackathonLogoColored.svg') }}" alt="GreenHacks" id="main-title" class="mt-5">
     </div>
     <div class="row m-0">
-        <div id="white-background"></div>
+        <div id="white-background">
+
+            <h1 class="header center text-center mt-6">What is GreenHacks?</h1>
+
+            <div class="px-5 paragraph mb-5">
+                GreenHacks will tackle the growing problem of a lack of qualified individuals for technology related jobs.
+                Participants will have the opportunity to learn about all the new inspiring technologies and apply
+                new and old skills to build remarkable projects. A special focus will be
+                placed on promoting solutions to the environmental issues that are plaguing our country.
+                 To help bring awareness and solutions to the environmental epidemic, we will be
+                offering a prize for the best project related to the environment. We
+                will also be offering prizes to the top 3 projects regardless of topic. Company specific awards will also
+                be expected. The event will last 36 hours, giving plenty of time for participants to collaborate with
+                teammates to complete projects and share skills. There will also be plenty of time for networking as
+                participants will be encouraged to talk freely with other participants
+                or any of the participating companies. In this day and age, it is important for the general public to
+                be familiar and comfortable with technology. By encouraging a positive environment for growth and
+                learning, participants will actively reach out for advice and network among other peers.
+            </div>
+
+            <div style="height: 200px;">
+                {% include 'includes/footer.html' %}
+            </div>
+
+            <!-- <div class="row bottom">
+                <div class="col">
+                    <img src="{{ url_for('static',filename='assets/Asset 1.svg') }}" alt="GreenHacks" id="main-title" class="mt-5">
+                </div>
+                <div class="col">
+                    <img src="{{ url_for('static',filename='assets/Asset 2.svg') }}" alt="GreenHacks" id="main-title" class="mt-5">
+                </div>
+                <div class="col">
+                    <img src="{{ url_for('static',filename='assets/Asset 3.svg') }}" alt="GreenHacks" id="main-title" class="mt-5">
+                </div>
+            </div> -->
+        </div>
     </div>
 </div>
 {% endblock %}

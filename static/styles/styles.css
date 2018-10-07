@@ -18,10 +18,11 @@ body {
 }
 
 #white-background {
-    position: relative;
+    top: 100%;
+    right: 0;
+    position: absolute;
     background: white;
     width: 100vw;
-    height: 100vh;
     z-index: -2;
 }
 
@@ -110,4 +111,16 @@ body {
     border: 1px solid #f5c8c8;
     padding: 10px;
     border-radius: .25rem;
+}
+
+.center {
+    margin: 32px auto;
+}
+
+.mt-6 {
+    margin-top: 56px;
+}
+
+.paragraph {
+    font-size: 18px;
 }
