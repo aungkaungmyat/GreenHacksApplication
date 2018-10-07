@@ -31,6 +31,14 @@ def landing_page():
     else:
         return render_template('index.html', user=None)
 
+@app.route('/sponsors')
+def sponsors_page():
+    if session:
+        return render_template('sponsors.html', user=session['username'])
+    else:
+        return render_template('sponsors.html', user=None)
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
     errorMessage = ''
